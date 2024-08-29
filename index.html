@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unleashing the Power of Video</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/videobar.css">
+</head>
+<body>
+    <header>
+        <div class="search-bar">
+            <div class="tab">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Portfolio</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Enter city name" spellcheck="true" id="city">
+                <button type="submit" onclick="getGeocodingService()"><img class="icon" src="./assets/icon/search.png"/></button>
+            </div>
+        </div>
+        <div class="card">
+            <img class="weather" src="./assets/weather/cloudy.png" alt="Cloudy weather icon">
+            <h1 class="temperature" id="temperature">32 °C</h1>
+            <h2 class="location" id="location">Bangkok</h2>
+            <div class="details">
+                    <div class="col">
+                        <img src="./assets/weather/humidity.png" alt="">
+                        <div class ="row">
+                            <h3 id="humidity">64%</h3>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="./assets/weather/windy.png" alt="">
+                        <div class ="row">
+                            <h3 id="windspeed">8km/hr</h3>
+                             <p>Wind speed</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="hero" dropzone="move"> 
+        <ul class="video-tab">
+            <li><button onclick="changeVideo('assets/video.mp4','Jingliu')">Jingliu</button></li>
+            <li><button onclick="changeVideo('assets/topaz.mp4','Topaz')">Topaz</button></li>
+            <li><button onclick="changeVideo('assets/firefly.mp4','Firefly')">Firefly</button></li>
+        </ul> 
+        <video autoplay loop muted plays-inline class="back-video" id="myVideo">
+            <source src="assets/video.mp4" type="video/mp4">
+        </video>
+        <section class="content">
+            <h1 id="myName" draggable="true">Jingliu</h1>
+            <a href="">Explore</a>
+        </section>
+    </section>
+    <script type="text/javascript" src="changeVideo.js"></script>
+    <script type="text/javascript" src="./src/modules/weather.js"></script>
+</body>
+</html>
