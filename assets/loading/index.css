@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #00008bcb;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #00008bcb;
+}
+
+.wrapper .loader {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.wrapper .loader .loading {
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin: 0 10px;
+    animation: load 1.2s ease infinite;
+}
+
+.loader .loading.one {
+    animation-duration: 0.5s;
+}
+
+.loader .loading.two {
+    animation-duration: 0.7s;
+}
+
+.loader .loading.three {
+    animation-duration: 0.9s;;
+}
+
+.clip1 {
+    background: url(https://honkai.gg/wp-content/uploads/image-1705.png);
+    background-size: 100% ;
+    background-position: center;
+}
+
+@keyframes load {
+    0% {
+        width: 30px;
+        height: 30px;
+    }
+
+    50% {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+::webkit-scr
